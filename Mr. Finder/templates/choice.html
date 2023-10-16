@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Finder - Choice</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Mr. Finder</h1>
+        <p>Welcome to Mr. Finder! Choose an option:</p>
+        <button><a href="{{ url_for('entry_form', user_id=user_id) }}">Entry form</a></button>
+        <button><a href="{{ url_for('find', user_id=user_id) }}">Find Item</a></button>
+    </div>
+</body>
+</html>

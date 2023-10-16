@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Mr. Finder </h1>
+
+        <form method="post" action="{{ url_for('validate_user') }}">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="enrollment">Enrollment Number:</label>
+            <input type="text" id="enrollment" name="enrollment" required><br><br>
+
+            <input type="submit" value="Proceed"><br>
+        </form>
+
+        {% if message %}
+            <p class="error">{{ message }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

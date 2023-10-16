@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entry Form</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Mr. Finder Entry Form</h1> <br>
+        <form action="{{ url_for('entry_form', user_id=user_id) }}" method="POST">
+            <label for="name">Name : </label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="stream">Choose your stream </label>
+            <select name="stream" id="stream">
+                <option value="cse">CSE</option>
+                <option value="cse(aiml)">CSE(A.I.M.L)</option>
+                <option value="csit">CSIT</option>
+                <option value="ece">ECE</option>
+                <option value="bba">BBA</option>
+            </select>
+            <br><br>
+            <label for="year">Choose your year </label>
+            <select name="year" id="year">
+                <option value="1st">1st Year</option>
+                <option value="2nd">2nd Year</option>
+                <option value="3rd">3rd Year</option>
+                <option value="4th">4th Year</option>
+            </select>
+            <br><br>
+            <label for="contact_no"> Contact Number : </label>
+            <input type="tel" id="contact_no" name="contact_no" required><br><br>
+            <label for="item_name">Enter item name : </label>
+            <input type="text" id="item_name" name="item_name" required><br><br>
+            <label for="date">Found Date:</label>
+            <input type="date" id="date" name="date" required><br><br>
+            <input type="submit" value="Submit"><br><br>
+        </form>
+    </div>
+</body>
+</html>
+

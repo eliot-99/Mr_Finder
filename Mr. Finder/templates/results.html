@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Mr. Finder - Search Results</h1><br><br>
+
+    {% if search_results %}
+        <p>Matching items found</p>
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Stream</th>
+                <th>Year</th>
+                <th>Contact</th>
+                <th>Item Name</th>
+                <th>Found Date</th>
+            </tr>
+            {% for result in search_results %}
+                <tr>
+                    <td>{{ result[0] }}</td>
+                    <td>{{ result[2] }}</td>
+                    <td>{{ result[3] }}</td>
+                    <td>{{ result[4] }}</td>
+                    <td>{{ result[5] }}</td>
+                    <td>{{ result[6] }}</td>
+                    <td>{{ result[7] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>No matching name found. Displaying all lost items:</p>
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Stream</th>
+                <th>Year</th>
+                <th>Contact</th>
+                <th>Item Name</th>
+                <th>Found Date</th>
+            </tr>
+            {% for result in search_results %}
+                <tr>
+                    <td>{{ result[0] }}</td>
+                    <td>{{ result[2] }}</td>
+                    <td>{{ result[3] }}</td>
+                    <td>{{ result[4] }}</td>
+                    <td>{{ result[5] }}</td>
+                    <td>{{ result[6] }}</td>
+                    <td>{{ result[7] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+    
+</body>
+</html>
